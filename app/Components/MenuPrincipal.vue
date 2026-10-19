@@ -7,7 +7,6 @@
       <div class="liens">
         <NuxtLink to="/">Accueil</NuxtLink>
         <NuxtLink to="/parcours">Parcours</NuxtLink>
-        <NuxtLink to="/cv">CV</NuxtLink>
       </div>
     </nav>
   </header>
