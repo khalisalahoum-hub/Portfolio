@@ -1,0 +1,29 @@
+/* mes couleurs, réutilisables partout avec var(--nom) */
+:root {
+    --couleur-fond: #f4ecd8;
+    --couleur-texte: #2b2b3a;
+    --couleur-accent: #e8644a;
+    --couleur-bleu: #4a7fd1;
+    --couleur-vert: #5aa469;
+  }
+  
+  /* le style de base du site : propre et lisible, pas de pixel */
+  body {
+    margin: 0;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* à mettre sur un élément pour lui donner la police pixel */
+  .police-pixel {
+    font-family: 'Press Start 2P', monospace;
+    line-height: 1.4;
+  }
+  
+  /* à mettre sur un élément pour lui donner un cadre pixel */
+  .cadre-pixel {
+    border: 3px solid var(--couleur-texte);
+    background-color: white;
+    box-shadow: 4px 4px 0 var(--couleur-texte);
+  }
