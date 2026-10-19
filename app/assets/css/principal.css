@@ -1,69 +1,99 @@
-/* ma palette de nuit, tirée de mon image de bureau */
+
 :root {
-    --couleur-fond: #0a1128;
-    --couleur-surface: #111a36;
-    --couleur-bordure: #223060;
-    --couleur-texte: #e6ecf8;
-    --couleur-texte-doux: #8a9bc4;
-    --couleur-accent: #f0a040;
-    --couleur-bleu: #3b6fd8;
+    --couleur-fond: #080D18;
+    --couleur-surface: #111B2B;
+    --couleur-bordure: #26344A;
+  
+    --couleur-texte: #DCE6F5;
+    --couleur-texte-doux: #8B9BB5;
+  
+    --couleur-accent: #4D8DFF;
+    --couleur-bleu: #4D8DFF;
+  
+    --couleur-surface-hover: #17243A;
   }
   
   * {
     box-sizing: border-box;
   }
   
-  /* le style de base du site : sobre et lisible */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     margin: 0;
-    background-color: var(--couleur-fond);
+    background: var(--couleur-fond);
     color: var(--couleur-texte);
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
   
   h1,
   h2,
   h3 {
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.035em;
   }
   
   a {
     color: inherit;
   }
   
-  /* je centre mes pages avec une largeur maximale */
-  .conteneur {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 24px;
+  ::selection {
+    background: rgba(77, 141, 255, 0.3);
+    color: #fff;
   }
   
-  /* mon bouton principal */
+  .conteneur {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+  }
+  
   .bouton {
-    display: inline-block;
-    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
     border: 1px solid var(--couleur-accent);
-    border-radius: 8px;
-    background-color: var(--couleur-accent);
-    color: var(--couleur-fond);
-    font-weight: 600;
+    border-radius: 9px;
+    background: var(--couleur-accent);
+    color: #080D18;
+    font-weight: 650;
     text-decoration: none;
-    transition: transform 0.15s;
+    transition: background 0.2s, transform 0.2s;
   }
   
   .bouton:hover {
+    background: #75A7FF;
     transform: translateY(-2px);
   }
   
-  /* mon bouton secondaire, plus discret */
   .bouton-secondaire {
-    background-color: transparent;
+    background: transparent;
     border-color: var(--couleur-bordure);
     color: var(--couleur-texte);
   }
   
   .bouton-secondaire:hover {
-    border-color: var(--couleur-texte-doux);
+    background: var(--couleur-surface-hover);
+    border-color: var(--couleur-accent);
   }
+  
+  @media (max-width: 700px) {
+    .conteneur {
+      width: calc(100% - 32px);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  

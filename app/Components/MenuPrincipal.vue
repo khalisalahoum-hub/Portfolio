@@ -2,11 +2,11 @@
   <!-- mon menu en haut de la page -->
   <header class="entete">
     <nav class="menu">
-      <NuxtLink class="logo" to="/">Khalis</NuxtLink>
+      <NuxtLink class="logo" to="/"><span class="chevron">&gt;_</span> khalis</NuxtLink>
 
       <div class="liens">
-        <NuxtLink to="/">Accueil</NuxtLink>
-        <NuxtLink to="/parcours">Parcours</NuxtLink>
+        <NuxtLink to="/">accueil</NuxtLink>
+        <NuxtLink to="/parcours">parcours</NuxtLink>
       </div>
     </nav>
   </header>
@@ -21,6 +21,8 @@
   background-color: rgba(10, 17, 40, 0.8);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--couleur-bordure);
+  font-family: var(--police-code);
+  font-size: 0.9rem;
 }
 
 .menu {
@@ -34,8 +36,11 @@
 
 .logo {
   font-weight: 700;
-  font-size: 1.1rem;
   text-decoration: none;
+}
+
+.chevron {
+  color: var(--code-vert);
 }
 
 .liens {
