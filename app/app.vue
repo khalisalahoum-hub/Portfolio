@@ -1,4 +1,5 @@
 <template>
-  <!-- Affiche la page correspondant à l'URL courante -->
+  <!-- mon menu, visible sur toutes les pages -->
+  <MenuPrincipal />
   <NuxtPage />
 </template>
