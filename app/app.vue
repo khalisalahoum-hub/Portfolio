@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <!-- Affiche la page correspondant à l'URL courante -->
+  <NuxtPage />
 </template>
