@@ -63,6 +63,9 @@ const blocsDroite = [
   <div class="scene">
     <img class="fond" src="/bureau-nuit.png" alt="Mon bureau la nuit en pixel art" />
 
+    <!-- mon dégradé qui fond les bords de l'image dans le fond du site -->
+    <div class="fondu"></div>
+
     <EcranCode class="ecran-gauche" :blocs="blocsGauche" :vitesse="90" :decalage="1800" />
     <EcranCode class="ecran-centre" :blocs="blocsCentre" :vitesse="65" :decalage="0" />
     <EcranCode class="ecran-droite" :blocs="blocsDroite" :vitesse="75" :decalage="900" />
@@ -74,7 +77,7 @@ const blocsDroite = [
 .scene {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   aspect-ratio: 1585 / 992;
   container-type: inline-size;
@@ -85,6 +88,16 @@ const blocsDroite = [
   width: 100%;
   height: 100%;
   image-rendering: pixelated;
+}
+
+/* deux dégradés superposés : les côtés et le bas se fondent dans le fond du site */
+.fondu {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, var(--couleur-fond) 0%, transparent 10%, transparent 90%, var(--couleur-fond) 100%),
+    linear-gradient(to bottom, transparent 55%, var(--couleur-fond) 100%);
 }
 
 /* mes trois écrans sont posés par-dessus l'image */

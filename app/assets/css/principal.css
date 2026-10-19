@@ -1,29 +1,69 @@
-/* mes couleurs, réutilisables partout avec var(--nom) */
+/* ma palette de nuit, tirée de mon image de bureau */
 :root {
-    --couleur-fond: #f4ecd8;
-    --couleur-texte: #2b2b3a;
-    --couleur-accent: #e8644a;
-    --couleur-bleu: #4a7fd1;
-    --couleur-vert: #5aa469;
+    --couleur-fond: #0a1128;
+    --couleur-surface: #111a36;
+    --couleur-bordure: #223060;
+    --couleur-texte: #e6ecf8;
+    --couleur-texte-doux: #8a9bc4;
+    --couleur-accent: #f0a040;
+    --couleur-bleu: #3b6fd8;
   }
   
-  /* le style de base du site : propre et lisible, pas de pixel */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* le style de base du site : sobre et lisible */
   body {
     margin: 0;
     background-color: var(--couleur-fond);
     color: var(--couleur-texte);
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
   }
   
-  /* à mettre sur un élément pour lui donner la police pixel */
-  .police-pixel {
-    font-family: 'Press Start 2P', monospace;
-    line-height: 1.4;
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
   
-  /* à mettre sur un élément pour lui donner un cadre pixel */
-  .cadre-pixel {
-    border: 3px solid var(--couleur-texte);
-    background-color: white;
-    box-shadow: 4px 4px 0 var(--couleur-texte);
+  a {
+    color: inherit;
+  }
+  
+  /* je centre mes pages avec une largeur maximale */
+  .conteneur {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* mon bouton principal */
+  .bouton {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--couleur-accent);
+    border-radius: 8px;
+    background-color: var(--couleur-accent);
+    color: var(--couleur-fond);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s;
+  }
+  
+  .bouton:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* mon bouton secondaire, plus discret */
+  .bouton-secondaire {
+    background-color: transparent;
+    border-color: var(--couleur-bordure);
+    color: var(--couleur-texte);
+  }
+  
+  .bouton-secondaire:hover {
+    border-color: var(--couleur-texte-doux);
   }

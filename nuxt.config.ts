@@ -3,5 +3,5 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   // ma police pixel et mon style global
-  css: ['@fontsource/press-start-2p', '~/assets/css/principal.css']
+  css: ['~/assets/css/principal.css']
 })
